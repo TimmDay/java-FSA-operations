@@ -1,6 +1,6 @@
 # FSA Streamliner for Regular Expressions
 
-This program provides tools for streamlining finite state automata. They include :
+This program provides tools for streamlining finite state automata. They include:
 - Recognizer: will determine if a given string is valid according to a given FSA
 - determinizer: will determinize a non-deterministic FSA.
 - reverser: will reverse any FSA
@@ -17,29 +17,39 @@ To use the project:
 - run the code, copy/paste the console output to a [visualisation](http://www.webgraphviz.com/) tool
 
 Example:
-My favourite example is at the end of 
+My favourite example is at the end of MinimizeNFATest
+```
+// ((ab|ac)d+)*
+        Expression expr = Expr.star(Expr.concat(Expr.or(Expr.str("ab"), Expr.str("ac")), Expr.plus(Expr.ch('d'))));
+        System.out.println(expr);
+        NFA nfa = expr.compile();
+        DFA minDFA = NFAOperations.minimize(nfa);
 
+        System.out.println(nfa.toDot());
+        System.out.println(minDFA.toDot());
+```
+The three System.outs will print the dot code for the regex before and after operations have been applied. The pictures show how cool it is!
 
-
-
-
-
-You can construct your clunky FSA (
-
-
-
-The program will give you an output like this
+The output will look like this
 ```
 digraph G {
 rankdir=LR;
+0 [peripheries=2];
 0 -> 1 [label="a"];
-0 -> 2 [label="c"];
-1 -> 3 [label="b"];
-2 -> 4 [label="d"];
+1 -> 2 [label="b"];
+1 -> 2 [label="c"];
+2 -> 3 [label="d"];
+3 [peripheries=2];
 3 -> 1 [label="a"];
-3 -> 2 [label="c"];
-4 [peripheries=2];
+3 -> 3 [label="d"];
 }
 ```
 This describes the modified finite state automaton.
 To see what it looks like, use an online visulaisation tool such as [webgraphviz](http://www.webgraphviz.com/), and copy/paste the digraph description.
+
+Looking at the before and after for the minimisation example:
+
+![before](readme-imgs/fsa_example1.jpg?raw=true "Title")
+![before](readme-imgs/fsa_example2.jpg?raw=true "Title")
+
+Enjoy! 
