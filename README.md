@@ -6,12 +6,20 @@ This program provides tools for streamlining finite state automata. They include
 - reverser: will reverse any FSA
 - a minimiser: will minimise any FSA, using the Brzozowski algorithm
 
-This is a maven project, written in java. You can use the command line to run the maven tests, but I haven't set up any kind of user interface for using the program from the command line.
+This is a maven project written in java. You can use the command line to run the maven tests, but there is no kind of user interface for using the program from the command line.
 
 To use the project:
 - Open the project in a web editor such as IntelliJ 
-- Go to the tests folder
-- 
+- Go to the tests directory
+- Observe how to construct a regular expression in the directory ExpressionTest
+- Go to the test directory of any of the other operations to try them out
+- add your code to the bottom of the list of examples
+- run the code, copy/paste the console output to a [visualisation](http://www.webgraphviz.com/) tool
+
+Example:
+My favourite example is at the end of 
+
+
 
 
 
