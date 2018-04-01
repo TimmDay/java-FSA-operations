@@ -47,9 +47,14 @@ rankdir=LR;
 This describes the modified finite state automaton.
 To see what it looks like, use an online visulaisation tool such as [webgraphviz](http://www.webgraphviz.com/), and copy/paste the digraph description.
 
-Looking at the before and after for the minimisation example:
+Looking at the before and after for the minimisation example of the quite complex regex ((ab|ac)d+)*:
 
+We see the before image, of the raw FSA
 ![before](readme-imgs/fsa_example1.jpg?raw=true "Title")
+
+Then we see the after image, representing a much more efficient FSA.
+This is after using the determinize and reversal methods, which are part of the Brzozowski technique of minimisation.
 ![before](readme-imgs/fsa_example2.jpg?raw=true "Title")
+Much more efficient!
 
 Enjoy! 
