@@ -1,10 +1,20 @@
 # FSA Streamliner for Regular Expressions
 
+TLDR;
+
+Turn this:
+<img src="readme-imgs/fsa_example1.jpg" title="non-deterministic FSA" width="650">
+
+Into this!
+<img src="readme-imgs/fsa_example2.jpg" title="deterministic FSA" width="650">
+
+----
+
 This program provides tools for streamlining finite state automata. They include:
-- Recognizer: will determine if a given string is valid according to a given FSA
-- determinizer: will determinize a non-deterministic FSA.
-- reverser: will reverse any FSA
-- a minimiser: will minimise any FSA, using the Brzozowski algorithm
+- Recognizer: will determine if a given string is valid according to a given FSA. (regex)
+- Determinizer: will determinize a non-deterministic FSA. (more efficient)
+- Reverser: will reverse any FSA
+- Minimiser: will minimise any FSA, using the Brzozowski algorithm
 
 This is a maven project written in java. You can use the command line to run the maven tests, but there is no kind of user interface for using the program from the command line.
 
@@ -17,7 +27,7 @@ To use the project:
 - run the code, copy/paste the console output to a [visualisation](http://www.webgraphviz.com/) tool
 
 Example:
-My favourite example is at the end of MinimizeNFATest
+My favourite example is the final of the MinimizeNFATest test cases
 ```
 // ((ab|ac)d+)*
         Expression expr = Expr.star(Expr.concat(Expr.or(Expr.str("ab"), Expr.str("ac")), Expr.plus(Expr.ch('d'))));
