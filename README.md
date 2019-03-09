@@ -3,7 +3,7 @@
 ## TLDR;
 Implementations of tools for manipulating  Finite State Automata -> commonly used under the hood for regular expressions.
 
-Turn this: ((ab|ac)d+)*
+Using the Brzozowski algorithm, turn this: ((ab|ac)d+)*
 
 <img src="readme-imgs/fsa_example1.jpg" title="non-deterministic FSA" width="550">
 
