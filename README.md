@@ -1,14 +1,16 @@
 # FSA Streamliner for Regular Expressions
 
-TLDR;
+## TLDR;
+Implementations of tools for manipulating  Finite State Automata -> commonly used under the hood for regular expressions.
 
-Turn this:
+Turn this: ((ab|ac)d+)*
 
 <img src="readme-imgs/fsa_example1.jpg" title="non-deterministic FSA" width="550">
 
 Into this!
 
 <img src="readme-imgs/fsa_example2.jpg" title="deterministic FSA" width="550">
+
 
 ----
 
