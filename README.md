@@ -3,10 +3,12 @@
 TLDR;
 
 Turn this:
-<img src="readme-imgs/fsa_example1.jpg" title="non-deterministic FSA" width="650">
+
+<img src="readme-imgs/fsa_example1.jpg" title="non-deterministic FSA" width="550">
 
 Into this!
-<img src="readme-imgs/fsa_example2.jpg" title="deterministic FSA" width="650">
+
+<img src="readme-imgs/fsa_example2.jpg" title="deterministic FSA" width="550">
 
 ----
 
